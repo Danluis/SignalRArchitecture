@@ -1,0 +1,37 @@
+﻿@page
+@{
+    ViewData["Title"] = "SignalR Chat";
+}
+
+<h1>Chat en tiempo real</h1>
+
+<div>
+    <label for="roomSelect">Sala</label>
+    <select id="roomSelect">
+        <option value="Desarrollo">Desarrollo</option>
+        <option value="Diseño">Diseño</option>
+    </select>
+</div>
+
+<div>
+    <label for="userInput">Usuario</label>
+    <input id="userInput" maxlength="40" />
+</div>
+
+<div>
+    <label for="messageInput">Mensaje</label>
+    <input id="messageInput" maxlength="1000" />
+</div>
+
+<button id="sendButton" disabled>
+    Enviar
+</button>
+
+<p id="status">Conectando...</p>
+
+<ul id="messagesList"></ul>
+
+<script
+    src="~/js/signalr/dist/browser/signalr.min.js">
+</script>
+<script src="~/js/chat.js"></script>
